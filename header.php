@@ -23,11 +23,7 @@
 			<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
 		<![endif]-->
 		<?php wp_head(); ?>
-		<script src="<?php echo get_template_directory_uri(); ?>/grunt/bower_components/webcomponentsjs/webcomponents.js"></script>
-
-		<link href="<?php echo get_template_directory_uri(); ?>/grunt/bower_components/core-icons/core-icons.html" rel="import">
-  		<link href="<?php echo get_template_directory_uri(); ?>/grunt/bower_components/paper-fab/paper-fab.html" rel="import">
-
+		<script src="<?php echo get_template_directory_uri(); ?>/grunt/bower_components/webcomponentsjs/webcomponents.js"></script>		
 	</head>
 	<body <?php body_class(); ?>>
 		<div class="site">
@@ -35,8 +31,7 @@
 			<header class="site-header">
 
 				<?php if ( '' != get_custom_header()->url ) : ?>
-					<!--<img src="<?php header_image(); ?>" class="custom-header" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />-->
-					<paper-fab icon="arrow-forward" title="arrow-forward"></paper-fab>
+					<!--<img src="<?php header_image(); ?>" class="custom-header" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />-->					
 				<?php endif; ?>
 
 				<a class="logo" href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>">

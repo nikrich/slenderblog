@@ -9,6 +9,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
+	<link href="<?php echo get_template_directory_uri(); ?>/grunt/bower_components/core-icons/core-icons.html" rel="import">
+  	<link href="<?php echo get_template_directory_uri(); ?>/grunt/bower_components/paper-fab/paper-fab.html" rel="import">
+
 
 	<h1 class="post-title"><?php
 
@@ -38,7 +42,7 @@
 
 			<?php the_excerpt(); ?>
 			<a href="<?php the_permalink(); ?>"><?php _e( 'Read more &raquo;', 'slenderblog' ); ?></a>
-
+			<a href="<?php the_permalink(); ?>"><paper-fab icon="arrow-forward" title="arrow-forward" role="button"></paper-fab></a>
 		<?php else : ?>
 
 			<?php the_content( __( 'Continue reading &raquo', 'slenderblog' ) ); ?>
@@ -56,7 +60,7 @@
 				)
 			);
 		?>
-
+		
 	</div>
 
 </article>
