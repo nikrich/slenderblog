@@ -1,10 +1,17 @@
-.site-header {
-	overflow: hidden;
-	padding: 3em 0;
+.site-header {	
+	padding: 7em 0;
 	position:relative;
-	height: 300px;
-	border-bottom: 3px solid $color2;
+	height: 450px;	
+	background-color:$color2;	
+
+	paper-fab{
+		position: absolute;
+		bottom: -1.5em;
+		color: $color2;
+	}
 }
+
+
 
 .custom-header {
 	position: absolute;
@@ -14,20 +21,18 @@
 .logo {
 	@include span-columns(8);
 	@include shift(2);
-	color: $color2;
+	color: $color1;
 	position: relative;
 	z-index: 2;
 
 	.blog-name {
 		margin-bottom: 0.2em;
-		text-align: center;
-		text-shadow: 0 0 .5em $color1;
+		text-align: center;		
 	}
 
 	.blog-description {
 		margin-bottom: 1.5em;
 		text-align: center;
-		font-style: italic;
-		text-shadow: 0 0 .5em $color1;
+		font-style: italic;		
 	}
 }

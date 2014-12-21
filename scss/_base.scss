@@ -1,7 +1,10 @@
 // variables
 $color1: #fafafa;
-$color2: #333;
+$color2: #212121;
 $color3: #fafafa;
+$colorgrey: #e0e0e0;
+$colorgreen: #4CAF50;
+$colorwhite: #FAFAFA;
 
 // default styling
 body {
@@ -18,12 +21,8 @@ body.custom-background {
 }
 
 a {
-	color: $color3;
-	text-decoration: none;
-}
-
-h1 a {
 	color: $color2;
+	text-decoration: none;
 }
 
 img {
@@ -38,8 +37,7 @@ input, textarea {
 	box-shadow: inset -1px -1px 6px $color1;
 }
 
-.site {
-	overflow: hidden;
+.site {	
 	background: rgba($color1, 0.85);
 	@include outer-container;
 }

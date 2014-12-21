@@ -4,6 +4,15 @@
 
 article {
 	@include clearfix;
+	background-color: $colorgrey;
+
+	border-top-width:1px;
+	border-top-style: solid;
+	border-top-color: #F5F5F5;
+
+	border-bottom-width:1px;
+	border-bottom-style: solid;
+	border-bottom-color: #BDBDBD;
 }
 
 .archive-title, .search-title h1 {
@@ -80,8 +89,8 @@ article {
 	@include shift(1);
 
 	position: relative;
-	background: $color2;
-	color: $color1;
+	background: $color1;
+	color: $color2;
 	padding: 1.5em;
 	margin-top: 1.5em;
 }
@@ -110,9 +119,7 @@ article {
 
 .pagination {
 	@include span-columns(12);
-
-	border-bottom: 3px solid $color2;
-
+	
 	ul {
 		list-style: none;
 		text-align:center;

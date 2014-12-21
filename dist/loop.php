@@ -10,11 +10,10 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
-	<link href="<?php echo get_template_directory_uri(); ?>/grunt/bower_components/core-icons/core-icons.html" rel="import">
-  	<link href="<?php echo get_template_directory_uri(); ?>/grunt/bower_components/paper-fab/paper-fab.html" rel="import">
+	
 
 
-	<h1 class="post-title"><?php
+	<h3 class="post-title"><?php
 
 		if ( is_singular() ) :
 			the_title();
@@ -26,7 +25,7 @@
 
 		endif; ?>
 
-	</h1>
+	</h3>
 
 	<div class="post-meta"><?php
 		slenderblog_post_meta(); ?>
@@ -41,8 +40,8 @@
 		<?php if ( is_front_page() || is_category() || is_archive() || is_search() ) : ?>
 
 			<?php the_excerpt(); ?>
-			<a href="<?php the_permalink(); ?>"><?php _e( 'Read more &raquo;', 'slenderblog' ); ?></a>
-			<a href="<?php the_permalink(); ?>"><paper-fab icon="arrow-forward" title="arrow-forward" role="button"></paper-fab></a>
+			<!--<a href="<?php the_permalink(); ?>"><?php _e( 'Read more &raquo;', 'slenderblog' ); ?></a>-->
+			<a href="<?php the_permalink(); ?>"><paper-fab icon="arrow-forward" title="arrow-forward" role="button" class="green"></paper-fab></a>
 		<?php else : ?>
 
 			<?php the_content( __( 'Continue reading &raquo', 'slenderblog' ) ); ?>

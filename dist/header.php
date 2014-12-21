@@ -23,34 +23,39 @@
 			<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
 		<![endif]-->
 		<?php wp_head(); ?>
-		<script src="<?php echo get_template_directory_uri(); ?>/grunt/bower_components/webcomponentsjs/webcomponents.js"></script>		
+		<script src="<?php echo get_template_directory_uri(); ?>/grunt/bower_components/webcomponentsjs/webcomponents.js"></script>
+		<link href="<?php echo get_template_directory_uri(); ?>/grunt/bower_components/paper-shadow/paper-shadow.html" rel="import">	
+		<link href="<?php echo get_template_directory_uri(); ?>/grunt/bower_components/core-icons/core-icons.html" rel="import">
+  		<link href="<?php echo get_template_directory_uri(); ?>/grunt/bower_components/paper-fab/paper-fab.html" rel="import">	
+
 	</head>
 	<body <?php body_class(); ?>>
 		<div class="site">
+			<paper-shadow  class="card" z="1">
+				<header class="site-header">
 
-			<header class="site-header">
+					<?php if ( '' != get_custom_header()->url ) : ?>
+						<!--<img src="<?php header_image(); ?>" class="custom-header" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />-->					
+					<?php endif; ?>
 
-				<?php if ( '' != get_custom_header()->url ) : ?>
-					<!--<img src="<?php header_image(); ?>" class="custom-header" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />-->					
-				<?php endif; ?>
+					<a class="logo" href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>">
+						<h1 class="blog-name"><?php bloginfo( 'name' ); ?></h1>
+						<div class="blog-description"><?php bloginfo( 'description' ); ?></div>
+					</a>
 
-				<a class="logo" href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>">
-					<h1 class="blog-name"><?php bloginfo( 'name' ); ?></h1>
-					<div class="blog-description"><?php bloginfo( 'description' ); ?></div>
-				</a>
+					<div class="menu"><?php
 
-				<div class="menu"><?php
+						$nav_menu = wp_nav_menu(
+							array(
+								'container' => 'nav',
+								'container_class' => 'main-menu',
+								'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+								'theme_location' => 'main-menu',
+								'fallback_cb' => '__return_false',
+							)
+						); ?>
 
-					$nav_menu = wp_nav_menu(
-						array(
-							'container' => 'nav',
-							'container_class' => 'main-menu',
-							'items_wrap' => '<ul class="%2$s">%3$s</ul>',
-							'theme_location' => 'main-menu',
-							'fallback_cb' => '__return_false',
-						)
-					); ?>
-
-				</div>
-
-			</header>
+					</div>
+				<paper-fab icon="arrow-forward" title="arrow-forward" role="button" class="white"></paper-fab>
+				</header>
+			</paper-shadow>
