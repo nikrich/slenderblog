@@ -141,7 +141,10 @@ module.exports = function(grunt) {
 					ignore: [
 						'../dist{,/**/*}',
 						'../doc{,/**/*}',
-						'../grunt{,/**/*}',
+						'../grunt{,/node_modules/**/*}',
+						'../grunt{,/.sass-cache/}',
+						'../grunt{,/gruntfile.js}',
+						'../grunt{,/package.json}',
 						'../scss{,/**/*}'
 					]
 				}
